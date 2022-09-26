@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
 
@@ -10,11 +10,11 @@ function App() {
 // function handleDarkModeClick(){
 //   setIsDark((isDark) => !isDark)
 // }
+
+  const appClass = isDark ? "App dark" : "App light"
   function toggleMode () {
     setIsDark((isDark) => !isDark)
   }
-
-  const appClass = isDark ? "App dark" : "App light"
 
   return (
     <div className={appClass}>
